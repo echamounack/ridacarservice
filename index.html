@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rida Car Service | By Mhammad Reeda</title>
+  <meta name="description" content="Rida Car Service - صيانة سيارات، حجوزات، واتساب واتصال مباشر" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{ --brand:#d90429; }
+    html[dir="rtl"] body{font-family:"Tajawal", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";}
+    html[dir="ltr"] body{font-family:"Inter", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";}
+    .glass{backdrop-filter:saturate(180%) blur(8px); background:rgba(255,255,255,0.75);} 
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <!-- Top bar -->
+  <header class="sticky top-0 z-40 bg-white/90 glass border-b border-gray-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-3">
+      <div class="flex items-center gap-3">
+        <img id="logo" alt="Rida Car Service" class="h-10 w-auto" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAkAAAAIACAIAAADloEQNAAAQAElEQVR4Aez9BaAlxZn3jz9V1X3OuT..."/>
+        <div class="leading-tight">
+          <p class="font-extrabold text-xl tracking-tight">Rida Car Service</p>
+          <p class="text-xs text-gray-600">By Mhammad Reeda</p>
+        </div>
+      </div>
+      <nav class="hidden md:flex items-center gap-4">
+        <a href="#services" class="text-sm hover:text-[var(--brand)]" data-i18n="nav_services">الخدمات</a>
+        <a href="#booking" class="text-sm hover:text-[var(--brand)]" data-i18n="nav_booking">حجز</a>
+        <a href="#location" class="text-sm hover:text-[var(--brand)]" data-i18n="nav_location">الموقع</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a id="cta-call" href="tel:+96176009013" class="hidden sm:inline-flex items-center rounded-2xl border border-gray-200 px-3 py-2 text-sm hover:bg-gray-50">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mx-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.86 19.86 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.89.31 1.76.57 2.6a2 2 0 0 1-.45 2.11l-1.27 1.27a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.84.26 1.71.45 2.6.57A2 2 0 0 1 22 16.92z"/></svg>
+          <span data-i18n="call_now">اتصل الآن</span>
+        </a>
+        <a id="cta-wa" href="https://wa.me/96176009013" target="_blank" rel="noopener" class="inline-flex items-center rounded-2xl bg-[var(--brand)] text-white px-3 py-2 text-sm shadow hover:opacity-95">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mx-1" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.9 11.9 0 0012.05 0C5.6 0 .48 5.12.48 11.56c0 2.04.54 4.02 1.56 5.78L0 24l6.86-1.97a11.52 11.52 0 005.2 1.27h.02c6.45 0 11.56-5.12 11.56-11.57 0-3.09-1.2-6-3.56-8.25zM12.07 21.2h-.02a9.69 9.69 0 01-4.94-1.36l-.35-.2-4.07 1.17 1.17-3.96-.23-.4a9.74 9.74 0 01-1.45-5.08c0-5.37 4.37-9.74 9.76-9.74a9.68 9.68 0 016.9 2.85 9.7 9.7 0 012.86 6.9c0 5.4-4.37 9.76-9.63 9.76zm5.53-7.32c-.3-.15-1.78-.88-2.05-.98-.28-.1-.48-.15-.68.15-.2.29-.78.98-.96 1.18-.18.2-.36.22-.66.07-.3-.15-1.25-.46-2.38-1.47a8.9 8.9 0 01-1.65-2.05c-.18-.3 0-.46.14-.61.14-.15.3-.36.46-.54.15-.18.2-.29.3-.49.1-.2.05-.37-.02-.52-.07-.15-.68-1.63-.93-2.22-.24-.58-.49-.5-.68-.5h-.58c-.2 0-.52.07-.8.37-.28.29-1.05 1.03-1.05 2.5 0 1.47 1.08 2.9 1.23 3.1.15.2 2.13 3.24 5.16 4.54.72.31 1.29.5 1.73.64.73.23 1.4.2 1.93.12.59-.09 1.78-.73 2.03-1.44.25-.71.25-1.31.18-1.44-.08-.13-.28-.21-.58-.36z"/></svg>
+          <span data-i18n="whatsapp_us">واتساب</span>
+        </a>
+        <button id="langToggle" class="rounded-xl border border-gray-200 px-3 py-2 text-sm">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-gradient-to-br from-white to-gray-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="text-3xl sm:text-5xl font-extrabold leading-tight mb-4"><span class="text-[var(--brand)]">Rida</span> Car Service</h1>
+        <p class="text-gray-700 mb-6" data-i18n="hero_sub">خدمة سيارات موثوقة، صيانة شاملة، وأسعار عادلة في قلب بيروت.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="#booking" class="inline-flex items-center rounded-2xl bg-[var(--brand)] text-white px-5 py-3 text-sm sm:text-base shadow hover:opacity-95" data-i18n="book_service">احجز خدمة</a>
+          <a href="tel:+96176009013" class="inline-flex items-center rounded-2xl border border-gray-200 px-5 py-3 text-sm sm:text-base hover:bg-gray-50" data-i18n="call_now">اتصل الآن</a>
+        </div>
+        <p class="mt-4 text-sm text-gray-500">WhatsApp: <a class="underline" href="https://wa.me/96176009013">+961 76 009 013</a></p>
+      </div>
+      <div class="rounded-3xl shadow-lg bg-white p-6">
+        <h3 class="font-bold text-lg mb-3" data-i18n="quick_quote">طلب تقدير سريع</h3>
+        <form id="quickQuote" class="grid gap-3">
+          <input class="border rounded-xl p-3" name="car" placeholder="نوع السيارة / الموديل" data-i18n-placeholder="car_model" required>
+          <textarea class="border rounded-xl p-3" name="issue" placeholder="ما المشكلة؟" data-i18n-placeholder="issue" rows="3" required></textarea>
+          <div class="flex gap-2">
+            <input class="border rounded-xl p-3 w-full" name="name" placeholder="الاسم" data-i18n-placeholder="name" required>
+            <input class="border rounded-xl p-3 w-full" name="phone" placeholder="الهاتف" data-i18n-placeholder="phone" required>
+          </div>
+          <button class="rounded-2xl bg-gray-900 text-white px-4 py-3 hover:opacity-95" data-i18n="send_on_whatsapp" type="submit">إرسال على واتساب</button>
+        </form>
+        <p class="text-xs text-gray-500 mt-2" data-i18n="quote_note">سيتم فتح واتساب مع رسالة جاهزة لإرسالها.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="max-w-6xl mx-auto px-4 sm:px-6 py-14">
+    <h2 class="text-2xl sm:text-3xl font-extrabold mb-6" data-i18n="services_title">خدمات الصيانة</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <!-- Cards -->
+      <label class="flex items-start gap-3 p-4 bg-white rounded-2xl border hover:shadow cursor-pointer">
+        <input type="checkbox" class="mt-1" value="تبديل زيت"/>
+        <div>
+          <p class="font-semibold" data-i18n="svc_oil">تبديل زيت وفلاتر</p>
+          <p class="text-sm text-gray-500" data-i18n="svc_oil_d">زيوت عالية الجودة وفحص سريع.</p>
+        </div>
+      </label>
+      <label class="flex items-start gap-3 p-4 bg-white rounded-2xl border hover:shadow cursor-pointer">
+        <input type="checkbox" class="mt-1" value="فرامل"/>
+        <div>
+          <p class="font-semibold" data-i18n="svc_brakes">فحص واستبدال الفرامل</p>
+          <p class="text-sm text-gray-500" data-i18n="svc_brakes_d">أقراص وبطانات أصلية.</p>
+        </div>
+      </label>
+      <label class="flex items-start gap-3 p-4 bg-white rounded-2xl border hover:shadow cursor-pointer">
+        <input type="checkbox" class="mt-1" value="إطارات"/>
+        <div>
+          <p class="font-semibold" data-i18n="svc_tires">إطارات وتوازن</p>
+          <p class="text-sm text-gray-500" data-i18n="svc_tires_d">تركيب، ترصيص، بنشر.</p>
+        </div>
+      </label>
+      <label class="flex items-start gap-3 p-4 bg-white rounded-2xl border hover:shadow cursor-pointer">
+        <input type="checkbox" class="mt-1" value="بطارية"/>
+        <div>
+          <p class="font-semibold" data-i18n="svc_battery">بطارية و كهرباء</p>
+          <p class="text-sm text-gray-500" data-i18n="svc_battery_d">فحص شحن واستبدال.</p>
+        </div>
+      </label>
+      <label class="flex items-start gap-3 p-4 bg-white rounded-2xl border hover:shadow cursor-pointer">
+        <input type="checkbox" class="mt-1" value="تكييف"/>
+        <div>
+          <p class="font-semibold" data-i18n="svc_ac">تكييف و تبريد</p>
+          <p class="text-sm text-gray-500" data-i18n="svc_ac_d">تعئبة غاز وصيانة.</p>
+        </div>
+      </label>
+      <label class="flex items-start gap-3 p-4 bg-white rounded-2xl border hover:shadow cursor-pointer">
+        <input type="checkbox" class="mt-1" value="تشخيص كمبيوتر"/>
+        <div>
+          <p class="font-semibold" data-i18n="svc_diag">تشخيص كمبيوتر</p>
+          <p class="text-sm text-gray-500" data-i18n="svc_diag_d">قراءة الأعطال وفحص شامل.</p>
+        </div>
+      </label>
+    </div>
+
+    <div class="mt-6 flex flex-wrap gap-3">
+      <a href="#booking" class="inline-flex items-center rounded-2xl bg-[var(--brand)] text-white px-5 py-3 text-sm sm:text-base shadow hover:opacity-95" data-i18n="book_selected">احجز الخدمات المحددة</a>
+      <a href="https://wa.me/96176009013" target="_blank" class="inline-flex items-center rounded-2xl border border-gray-200 px-5 py-3 text-sm sm:text-base hover:bg-gray-50" data-i18n="ask_on_whatsapp">اسأل على واتساب</a>
+    </div>
+  </section>
+
+  <!-- Booking -->
+  <section id="booking" class="bg-white border-y border-gray-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-14 grid md:grid-cols-2 gap-10 items-start">
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold mb-4" data-i18n="book_title">حجز خدمة</h2>
+        <p class="text-gray-600 mb-6" data-i18n="book_desc">اختر الخدمات ووقت الزيارة وسنؤكد معك عبر واتساب أو اتصال.</p>
+        <ul class="text-sm text-gray-600 space-y-2">
+          <li>📞 <span data-i18n="call_or_wa">اتصال أو واتساب:</span> <a class="underline" href="tel:+96176009013">+961 76 009 013</a></li>
+          <li>🕒 <span data-i18n="working_hours">الدوام:</span> 8:00 - 19:00 (الإثنين - السبت)</li>
+        </ul>
+      </div>
+      <form id="bookingForm" class="bg-gray-50 rounded-3xl p-6 grid gap-4">
+        <div>
+          <label class="block text-sm mb-1" data-i18n="your_name">الاسم</label>
+          <input name="name" class="border rounded-xl p-3 w-full" required />
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm mb-1" data-i18n="your_phone">الهاتف</label>
+            <input name="phone" class="border rounded-xl p-3 w-full" required />
+          </div>
+          <div>
+            <label class="block text-sm mb-1" data-i18n="car_model">نوع السيارة / الموديل</label>
+            <input name="car" class="border rounded-xl p-3 w-full" required />
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm mb-1" data-i18n="date">التاريخ</label>
+            <input name="date" type="date" class="border rounded-xl p-3 w-full" required />
+          </div>
+          <div>
+            <label class="block text-sm mb-1" data-i18n="time">الوقت</label>
+            <input name="time" type="time" class="border rounded-xl p-3 w-full" required />
+          </div>
+        </div>
+        <div>
+          <label class="block text-sm mb-1" data-i18n="select_services">اختر الخدمات</label>
+          <select name="services" class="border rounded-xl p-3 w-full" multiple size="6">
+            <option>تبديل زيت</option>
+            <option>فحص واستبدال الفرامل</option>
+            <option>إطارات وتوازن</option>
+            <option>بطارية و كهرباء</option>
+            <option>تكييف و تبريد</option>
+            <option>تشخيص كمبيوتر</option>
+          </select>
+          <p class="text-xs text-gray-500 mt-1" data-i18n="multi_select">يمكن اختيار أكثر من خدمة (اضغط Ctrl/⌘).</p>
+        </div>
+        <div>
+          <label class="block text-sm mb-1" data-i18n="notes">ملاحظات</label>
+          <textarea name="notes" class="border rounded-xl p-3 w-full" rows="3" placeholder="أصوات عند الفرملة، لمبة تشيك إنجن..." data-i18n-placeholder="notes_ph"></textarea>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <button type="submit" class="rounded-2xl bg-[var(--brand)] text-white px-5 py-3 font-semibold" data-i18n="book_now">تأكيد على واتساب</button>
+          <a href="tel:+96176009013" class="rounded-2xl border border-gray-200 px-5 py-3" data-i18n="call_now">اتصل الآن</a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Location -->
+  <section id="location" class="max-w-6xl mx-auto px-4 sm:px-6 py-14">
+    <h2 class="text-2xl sm:text-3xl font-extrabold mb-4" data-i18n="location_title">موقعنا</h2>
+    <p class="text-gray-600 mb-4" data-i18n="location_desc">اضغط على الخريطة للملاحة إلى الورشة.</p>
+    <div class="aspect-video w-full rounded-3xl overflow-hidden shadow">
+      <iframe id="mapFrame" class="w-full h-full" loading="lazy" allowfullscreen
+        src="https://www.google.com/maps?q=33.8903166,35.4732358&z=17&hl=ar&output=embed"></iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 grid sm:grid-cols-2 gap-6 items-center">
+      <div>
+        <p class="font-extrabold text-xl">Rida Car Service</p>
+        <p class="text-sm text-gray-300">By Mhammad Reeda</p>
+        <p class="text-sm mt-2">WhatsApp: <a class="underline" href="https://wa.me/96176009013">+961 76 009 013</a></p>
+      </div>
+      <div class="flex sm:justify-end gap-3">
+        <a href="https://wa.me/96176009013" class="inline-flex items-center rounded-2xl bg-[var(--brand)] text-white px-4 py-3">WhatsApp</a>
+        <a href="tel:+96176009013" class="inline-flex items-center rounded-2xl border border-gray-700 px-4 py-3" data-i18n="call_now">اتصل الآن</a>
+      </div>
+    </div>
+    <div class="text-center text-xs text-gray-400 pb-6">© <span id="year"></span> Rida Car Service — <span data-i18n="all_rights">جميع الحقوق محفوظة</span></div>
+  </footer>
+
+  <script>
+    // --- i18n strings ---
+    const t = {
+      ar: {
+        nav_services: 'الخدمات',
+        nav_booking: 'حجز',
+        nav_location: 'الموقع',
+        call_now: 'اتصل الآن',
+        whatsapp_us: 'واتساب',
+        hero_sub: 'خدمة سيارات موثوقة، صيانة شاملة، وأسعار عادلة في قلب بيروت.',
+        book_service: 'احجز خدمة',
+        quick_quote: 'طلب تقدير سريع',
+        car_model: 'نوع السيارة / الموديل',
+        issue: 'ما المشكلة؟',
+        name: 'الاسم',
+        phone: 'الهاتف',
+        send_on_whatsapp: 'إرسال على واتساب',
+        quote_note: 'سيتم فتح واتساب مع رسالة جاهزة لإرسالها.',
+        services_title: 'خدمات الصيانة',
+        svc_oil: 'تبديل زيت وفلاتر',
+        svc_oil_d: 'زيوت عالية الجودة وفحص سريع.',
+        svc_brakes: 'فحص واستبدال الفرامل',
+        svc_brakes_d: 'أقراص وبطانات أصلية.',
+        svc_tires: 'إطارات وتوازن',
+        svc_tires_d: 'تركيب، ترصيص، بنشر.',
+        svc_battery: 'بطارية و كهرباء',
+        svc_battery_d: 'فحص شحن واستبدال.',
+        svc_ac: 'تكييف و تبريد',
+        svc_ac_d: 'تعئبة غاز وصيانة.',
+        svc_diag: 'تشخيص كمبيوتر',
+        svc_diag_d: 'قراءة الأعطال وفحص شامل.',
+        book_selected: 'احجز الخدمات المحددة',
+        ask_on_whatsapp: 'اسأل على واتساب',
+        book_title: 'حجز خدمة',
+        book_desc: 'اختر الخدمات ووقت الزيارة وسنؤكد معك عبر واتساب أو اتصال.',
+        call_or_wa: 'اتصال أو واتساب:',
+        working_hours: 'الدوام:',
+        your_name: 'الاسم',
+        your_phone: 'الهاتف',
+        date: 'التاريخ',
+        time: 'الوقت',
+        select_services: 'اختر الخدمات',
+        notes: 'ملاحظات',
+        notes_ph: 'أصوات عند الفرملة، لمبة تشيك إنجن...',
+        multi_select: 'يمكن اختيار أكثر من خدمة (اضغط Ctrl/⌘).',
+        book_now: 'تأكيد على واتساب',
+        location_title: 'موقعنا',
+        location_desc: 'اضغط على الخريطة للملاحة إلى الورشة.',
+        all_rights: 'جميع الحقوق محفوظة'
+      },
+      en: {
+        nav_services: 'Services',
+        nav_booking: 'Booking',
+        nav_location: 'Location',
+        call_now: 'Call Now',
+        whatsapp_us: 'WhatsApp',
+        hero_sub: 'Reliable car care, full maintenance, and fair pricing in the heart of Beirut.',
+        book_service: 'Book a Service',
+        quick_quote: 'Quick Quote Request',
+        car_model: 'Car Make / Model',
+        issue: "What's the issue?",
+        name: 'Name',
+        phone: 'Phone',
+        send_on_whatsapp: 'Send on WhatsApp',
+        quote_note: 'WhatsApp will open with a pre-filled message.',
+        services_title: 'Maintenance Services',
+        svc_oil: 'Oil & Filters',
+        svc_oil_d: 'Premium oils and quick check.',
+        svc_brakes: 'Brakes Inspection/Replacement',
+        svc_brakes_d: 'OEM discs & pads.',
+        svc_tires: 'Tires & Balancing',
+        svc_tires_d: 'Fitment, balancing, puncture repair.',
+        svc_battery: 'Battery & Electrical',
+        svc_battery_d: 'Charging test & replacement.',
+        svc_ac: 'A/C & Cooling',
+        svc_ac_d: 'Re-gas and maintenance.',
+        svc_diag: 'Computer Diagnostics',
+        svc_diag_d: 'Code reading & full check.',
+        book_selected: 'Book Selected Services',
+        ask_on_whatsapp: 'Ask on WhatsApp',
+        book_title: 'Book a Service',
+        book_desc: 'Choose services and a visit time; we will confirm on WhatsApp or by phone.',
+        call_or_wa: 'Call or WhatsApp:',
+        working_hours: 'Hours:',
+        your_name: 'Name',
+        your_phone: 'Phone',
+        date: 'Date',
+        time: 'Time',
+        select_services: 'Select Services',
+        notes: 'Notes',
+        notes_ph: 'Brake noise, check engine light...',
+        multi_select: 'You can choose multiple services (hold Ctrl/⌘).',
+        book_now: 'Confirm on WhatsApp',
+        location_title: 'Our Location',
+        location_desc: 'Tap the map to navigate to the garage.',
+        all_rights: 'All rights reserved'
+      }
+    };
+
+    // Helper to update all i18n text/placeholder attributes
+    function applyI18n(lang){
+      document.documentElement.lang = lang;
+      document.documentElement.dir  = lang === 'ar' ? 'rtl' : 'ltr';
+      document.getElementById('langToggle').textContent = lang === 'ar' ? 'EN' : 'AR';
+
+      document.querySelectorAll('[data-i18n]').forEach(el=>{
+        const key = el.getAttribute('data-i18n');
+        if(t[lang][key]) el.textContent = t[lang][key];
+      });
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>{
+        const key = el.getAttribute('data-i18n-placeholder');
+        if(t[lang][key]) el.setAttribute('placeholder', t[lang][key]);
+      });
+      // Update map language
+      const map = document.getElementById('mapFrame');
+      const base = 'https://www.google.com/maps?q=33.8903166,35.4732358&z=17&output=embed&hl=';
+      map.src = base + (lang === 'ar' ? 'ar' : 'en');
+    }
+
+    // Language toggle
+    const toggle = document.getElementById('langToggle');
+    toggle.addEventListener('click', ()=>{
+      const next = document.documentElement.lang === 'ar' ? 'en' : 'ar';
+      localStorage.setItem('lang', next);
+      applyI18n(next);
+    });
+
+    // Quick quote -> open WhatsApp with prefilled message
+    document.getElementById('quickQuote').addEventListener('submit', e=>{
+      e.preventDefault();
+      const fd = new FormData(e.target);
+      const lang = document.documentElement.lang;
+      const lbl = lang === 'ar' ? {
+        q:'طلب تقدير سريع', car:'سيارة', issue:'مشكلة', name:'الاسم', phone:'الهاتف'
+      } : { q:'Quick Quote', car:'Car', issue:'Issue', name:'Name', phone:'Phone' };
+      const msg = `*${lbl.q}*\n${lbl.car}: ${fd.get('car')}\n${lbl.issue}: ${fd.get('issue')}\n${lbl.name}: ${fd.get('name')}\n${lbl.phone}: ${fd.get('phone')}`;
+      const url = 'https://wa.me/96176009013?text=' + encodeURIComponent(msg);
+      window.open(url, '_blank');
+    });
+
+    // Booking form -> WhatsApp
+    document.getElementById('bookingForm').addEventListener('submit', e=>{
+      e.preventDefault();
+      const fd = new FormData(e.target);
+      const services = Array.from(e.target.services.selectedOptions).map(o=>o.value).join(', ');
+      const lang = document.documentElement.lang;
+      const lbl = lang === 'ar' ? {
+        title:'حجز خدمة', name:'الاسم', phone:'الهاتف', car:'سيارة', date:'تاريخ', time:'وقت', services:'الخدمات', notes:'ملاحظات'
+      } : { title:'Service Booking', name:'Name', phone:'Phone', car:'Car', date:'Date', time:'Time', services:'Services', notes:'Notes' };
+      const msg = `*${lbl.title}*\n${lbl.name}: ${fd.get('name')}\n${lbl.phone}: ${fd.get('phone')}\n${lbl.car}: ${fd.get('car')}\n${lbl.date}: ${fd.get('date')}\n${lbl.time}: ${fd.get('time')}\n${lbl.services}: ${services || '-'}\n${lbl.notes}: ${fd.get('notes') || '-'}`;
+      const url = 'https://wa.me/96176009013?text=' + encodeURIComponent(msg);
+      window.open(url, '_blank');
+    });
+
+    // Preselect services from checkboxes -> open booking section with selected
+    document.querySelector('[data-i18n="book_selected"]').addEventListener('click', (e)=>{
+      const boxes = document.querySelectorAll('#services input[type="checkbox"]:checked');
+      const selected = Array.from(boxes).map(b=>b.value);
+      if(selected.length){
+        const select = document.querySelector('#bookingForm select[name="services"]');
+        Array.from(select.options).forEach(o=> o.selected = selected.some(s=>o.textContent.includes(s)) );
+      }
+    });
+
+    // Set current year and initial language
+    document.getElementById('year').textContent = new Date().getFullYear();
+    applyI18n(localStorage.getItem('lang') || 'ar');
+  </script>
+</body>
+</html>
